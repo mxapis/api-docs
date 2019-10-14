@@ -1,0 +1,8 @@
+PushNotificationSent:
+  $ref: './PushNotificationSent.yaml'
+Unauthorized:
+  $ref: './Unathorized.yaml'
+ValidationError:
+  $ref: './ValidationError.yaml'
+VisitorNotFound:
+  $ref: './VisitorNotFound.yaml'

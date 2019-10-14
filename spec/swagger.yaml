@@ -1,0 +1,72 @@
+openapi: '3.0'
+
+info:
+  title: MaxTraffic API
+  description: |
+    # Overview
+    Documentation for [MaxTraffic](https://maxtraffic.com) REST API Features.</br>
+    Example how to use API to send [Cart Abandonment notifications](https://help.maxtraffic.com/i71-how-to-send-cart-abandonment-notifications)</br>
+    [How to check if visitor has subscribed to push notifications?](https://help.maxtraffic.com/i69-how-to-check-if-visitor-has-subscribed-to-push-notifications)<br>
+    [Send personalised Push Notifications using API.](https://help.maxtraffic.com/i67-how-to-use-api-to-send-personalised-push-notifications)</br>
+    # Base URL
+    [https://mtapis.com/api](https://mtapis.com/api)
+    # API Call Structure
+    ## Request
+    All request you want to send to our API must contain authorization header.
+    We accept GET and POST HTTP methods. Every POST request must have Content-Type header. Currently we accept only 'application/json' content-type.
+    ### Headers
+    | Header                                | Description                                                                      |
+    |---------------------------------------|----------------------------------------------------------------------------------|
+    | ```Authorization: key=YOUR_API_KEY``` | An API Key is required to be sent as part of every request to the MaxTraffic API |
+    | ```Accept: application/json```        | To recieve response in JSON                                                      |
+    | ```Content-Type: application/json```  | To be able to send JSON data to an API                                           |
+
+    ## Response
+    The response format for the API is JSON. To get that response request must have Accept header with 'application/json' value.
+    ### Headers
+    | Header                | Description                                                                            |
+    |-----------------------|----------------------------------------------------------------------------------------|
+    | X-RateLimit-Limit     | The maximum number of requests that the consumer is permitted to make per minute       |
+    | X-RateLimit-Remaining | The number of requests remaining in the current rate limit window                      |
+
+    ### Status Codes
+    #### 200 (OK)
+    It indicates that the REST API successfully carried out whatever action the client requested
+    #### 401 (Unauthorized)
+    Wrong or empty Authorization header
+    #### 404 (Not Found)
+    Is returned if requested resource doesn`t exists. For instance if non existing Visitor id is provided.
+    #### 422 (Client Error)
+    The request cannot be processed either because it omitted required fields or because it contained invalid data.
+    #### 500 (Server Error)
+    Servers are not working as expected. Please report an issue to [support@maxtraffic.com](mailto:support@maxtraffic.com)
+
+  version: 1.0.1
+  x-logo:
+    url: https://s3.eu-central-1.amazonaws.com/assets.mxapis.com/maxtraffic.png
+    backgroundColor: '#246293'
+    altText: Maxtraffic logo
+
+servers:
+  - url: https://push.mxapis.com
+    description: Main Maxtraffic API Server
+
+paths:
+  $ref: ./paths/index.yaml
+
+components:
+  securitySchemes:
+    'Api key':
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |
+        [MaxTraffic](https://maxtraffic.com) controls access to the API and data via an API Key.
+        The API key is the primary data authentication method for your account.
+        Also your usage is recorded and reported via the API Key.
+        You can get the API key at the [MaxTraffic Console](https://e.maxtraffic.com/#/settings/web-push/api) APIs page.
+        ##### Example
+        ```Authorization: key=YOUR_API_KEY```
+
+security:
+  - 'Api key': []

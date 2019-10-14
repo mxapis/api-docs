@@ -1,0 +1,4 @@
+/notifications:
+  $ref: ./notifications.yaml
+/visitors/{id}:
+  $ref: ./visitors.yaml

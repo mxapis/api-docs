@@ -1,0 +1,23 @@
+{
+  "name": "api-docs",
+  "version": "1.0.0",
+  "description": "Maxtraffic API Documentation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run reload\" \"npm run watch\"",
+    "bundle": "redoc-cli bundle spec/swagger.yaml --output docs/index.html -t template/main.hbs",
+    "reload": "live-server --open=docs --watch=docs",
+    "watch": "watch \"npm run bundle\" spec template"
+  },
+  "author": "Kaspars Smilga",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "live-server": "^1.2.1",
+    "redoc-cli": "^0.9.2",
+    "watch": "^1.0.2"
+  }
+}

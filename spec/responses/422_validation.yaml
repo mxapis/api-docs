@@ -1,0 +1,13 @@
+description: Unprocessable Entity
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: The given data was invalid
+        errors:
+          type: object
+          example:
+            example_field: ["The example field field is required."]

@@ -1,0 +1,55 @@
+type: object
+required:
+  - messages
+  - to_ids
+  - to_uids
+properties:
+  messages:
+    type: array
+    minItems: 1
+    uniqueItems: true
+    items:
+      $ref: ./PushNotificationCreative.yaml
+  icon:
+    type: string
+    example: https://domain.com/icon.png
+    description: |
+      Sets the web push notification's icon.
+      An image URL linking to a valid image.
+      Common image types are supported; GIF will not animate.
+      We recommend 192x192 (at least 96x96) to display well on high DPI devices.
+      If blank the default website icon is used.
+  image:
+    type: string
+    example: https://domain.com/large_image.png
+    description: >
+      Sets the web push notification's large image to be shown below the
+      notification's title and text.
+  to_ids:
+    type: array
+    minItems: 1
+    uniqueItems: true
+    items:
+      type: string
+      description: |
+        Your website unique user id,
+        required without to_uids.
+        If both present to_ids and to_uids,
+        sends only to to_uids
+      example: a865e214-370d-11e7-a919-92ebcb67fe33
+  to_uids:
+    type: array
+    minItems: 1
+    uniqueItems: true
+    items:
+      type: string
+      description: |
+        Maxtraffic system user id,
+        required without to_ids.
+        If both present to_ids and to_uids,
+        sends only to to_uids
+      example: ee144c5007cf7f67b0837ac9d75dfbbb
+  campaign:
+    type: string
+    description: Notification campaign name, if not set 'default' used.
+    example: Cart abandonment

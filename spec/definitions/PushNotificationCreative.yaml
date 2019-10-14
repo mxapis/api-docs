@@ -1,0 +1,30 @@
+type: object
+required:
+- language
+- title
+- body
+- click_url
+properties:
+  language:
+    type: string
+    example: en
+    minLength: 2
+    maxLength: 2
+    description: Valid ISO 639-1 Code language code to send your push notification in. English (en) is default
+  title:
+    type: string
+    maxLength: 48
+    example: A message title
+  body:
+    type: string
+    maxLength: 100
+    example: A message body
+  click_url:
+    type: string
+    example: https://google.com
+    description: The URL to open in the browser when a user clicks on the notification.
+  buttons:
+    type: array
+    maxItems: 2
+    items:
+      $ref: ./PushNotificationButton.yaml

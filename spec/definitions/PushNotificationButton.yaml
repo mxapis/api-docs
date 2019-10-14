@@ -1,0 +1,14 @@
+type: object
+required:
+  - title
+  - click_url
+properties:
+  title:
+    type: string
+    description: Title that appears on button
+  click_url:
+    type: string
+    description: URL to open when user clicks on button
+  icon:
+    type: string
+    description: Button icon 128x128

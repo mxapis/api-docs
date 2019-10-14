@@ -1,0 +1,9 @@
+description: Unauthorized
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Failed to authenticate because of bad credentials or an invalid authorization header.

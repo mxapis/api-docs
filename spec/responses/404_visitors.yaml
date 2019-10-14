@@ -1,0 +1,12 @@
+description: Visitor not found
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: Visitor not found
+        status_code:
+          type: integer
+          example: 404

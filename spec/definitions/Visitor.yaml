@@ -1,0 +1,14 @@
+type: object
+properties:
+  id:
+    type: string
+    description: Maxtraffic system visitor ID
+    example: ed6ada8dc2adf6f16a1a4c1d0b8dca33
+  user_id:
+    type: string
+    description: Visitor ID assigned by your website
+    example: 3122de02-d105-481d-80e4-110fa3047a6c
+  web_push_subscriber:
+    type: boolean
+    description: Status of visitor notification subscription state
+    example: true

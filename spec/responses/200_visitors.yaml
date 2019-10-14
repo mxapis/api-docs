@@ -1,0 +1,5 @@
+description: Visitor
+content:
+  application/json:
+    schema:
+      $ref: '../definitions/Visitor.yaml'
