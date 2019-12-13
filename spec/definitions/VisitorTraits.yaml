@@ -1,9 +1,10 @@
 type: object
 properties:
   property:
-    oneOf:
+    anyOf:
       - type: string
       - type: string
         format: date-time
       - type: number
       - type: array
+    example: peter@initech.com

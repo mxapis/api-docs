@@ -27,6 +27,12 @@ post:
   summary: Set visitor traits
   description: |
     Set visitor traits. Before setting traits mappings should be created in your website account settings -> trait mappings
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../definitions/VisitorTraits.yaml
   parameters:
     - in: path
       name: id
