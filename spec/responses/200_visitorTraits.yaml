@@ -1,0 +1,5 @@
+description: Visitor Traits
+content:
+  application/json:
+    schema:
+      $ref: '../definitions/VisitorTraits.yaml'

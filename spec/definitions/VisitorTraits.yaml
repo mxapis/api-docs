@@ -1,0 +1,9 @@
+type: object
+properties:
+  property:
+    oneOf:
+      - type: string
+      - type: string
+        format: date-time
+      - type: number
+      - type: array

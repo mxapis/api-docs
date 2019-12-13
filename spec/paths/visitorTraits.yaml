@@ -1,0 +1,44 @@
+get:
+  operationId: getVisitorTraits
+  tags:
+    - Visitors
+  summary: Get visitor traits
+  description: View visitor traits
+  parameters:
+    - in: path
+      name: id
+      description: ID of visitor
+      required: true
+      type: string
+  responses:
+    '200':
+      $ref: ../responses/200_visitorTraits.yaml
+    '401':
+      $ref: ../responses/401.yaml
+    '404':
+      $ref: ../responses/404_visitors.yaml
+    '500':
+      $ref: ../responses/500.yaml
+
+post:
+  operationId: setVisitorTraits
+  tags:
+    - Visitors
+  summary: Set visitor traits
+  description: |
+    Set visitor traits. Before setting traits mappings should be created in your website account settings -> trait mappings
+  parameters:
+    - in: path
+      name: id
+      description: ID of visitor
+      required: true
+      type: string
+  responses:
+    '200':
+      $ref: ../responses/200_success.yaml
+    '401':
+      $ref: ../responses/401.yaml
+    '404':
+      $ref: ../responses/404_visitors.yaml
+    '500':
+      $ref: ../responses/500.yaml
