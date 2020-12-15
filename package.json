@@ -17,7 +17,7 @@
   "devDependencies": {
     "concurrently": "^5.0.0",
     "live-server": "^1.2.1",
-    "redoc-cli": "^0.9.2",
+    "redoc-cli": "^0.10.2",
     "watch": "^1.0.2"
   }
 }
