@@ -2,5 +2,5 @@
   $ref: ./notifications.yaml
 /visitors/{id}:
   $ref: ./visitors.yaml
-/visitors/{id}/traits:
-  $ref: ./visitorTraits.yaml
+# /visitors/{id}/traits:
+#   $ref: ./visitorTraits.yaml
