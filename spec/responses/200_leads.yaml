@@ -1,0 +1,5 @@
+description: Lead
+content:
+  application/json:
+    schema:
+      $ref: '../definitions/Lead.yaml'

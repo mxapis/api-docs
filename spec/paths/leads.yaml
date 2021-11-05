@@ -1,0 +1,21 @@
+get:
+  operationId: getCampaignLeads
+  tags:
+    - Leads
+    - Campaign
+    - WebBanner
+  summary: Get campaign leads
+  description: Get campaign leads by campaign id
+  parameters:
+    - in: path
+      name: id
+      description: ID of campaign
+      required: true
+      type: string
+  responses:
+    '200':
+      $ref: ../responses/200_leads.yaml
+    '401':
+      $ref: ../responses/401.yaml
+    '500':
+      $ref: ../responses/500.yaml

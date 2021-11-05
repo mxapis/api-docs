@@ -1,0 +1,14 @@
+type: object
+properties:
+  email:
+    type: string
+    description: Email address
+    example: email@example.com
+  timestamp:
+    type: string
+    description: Date time of lead
+    example: 2021-11-05 11:20:03
+  campaign:
+    type: string
+    description: Name of campaign
+    example: Summer sale
