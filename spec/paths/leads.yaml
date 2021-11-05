@@ -2,8 +2,6 @@ get:
   operationId: getCampaignLeads
   tags:
     - Leads
-    - Campaign
-    - WebBanner
   summary: Get campaign leads
   description: Get campaign leads by campaign id
   parameters:
