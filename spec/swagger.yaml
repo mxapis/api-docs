@@ -48,7 +48,7 @@ info:
     altText: Maxtraffic logo
 
 servers:
-  - url: https://mtapis.test/api
+  - url: https://mtapis.com/api
     description: Main Maxtraffic API Server
 
 paths:
