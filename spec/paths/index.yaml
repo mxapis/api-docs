@@ -2,7 +2,7 @@
   $ref: ./notifications.yaml
 /visitors/{id}:
   $ref: ./visitors.yaml
-/web-banner/campaign/{id}/leads:
+/web-banner/campaigns/{id}/leads:
   $ref: ./leads.yaml
 # /visitors/{id}/traits:
 #   $ref: ./visitorTraits.yaml
