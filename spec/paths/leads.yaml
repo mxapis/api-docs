@@ -10,6 +10,18 @@ get:
       description: ID of campaign
       required: true
       type: string
+    - in: query
+      name: from
+      schema:
+        type: string
+        format: date-time
+      description: Restrict the response to leads collected after the set time. Uses ISO 8601 time format.
+    - in: query
+      name: to
+      schema:
+        type: string
+        format: date-time
+      description: Restrict the response to leads collected before the set time. Uses ISO 8601 time format.
   responses:
     '200':
       $ref: ../responses/200_leads.yaml
