@@ -2,6 +2,8 @@
   $ref: ./notifications.yaml
 /visitors/{id}:
   $ref: ./visitors.yaml
+/web-banner/campaigns/leads:
+  $ref: ./all_leads.yaml
 /web-banner/campaigns/{id}/leads:
   $ref: ./leads.yaml
 # /visitors/{id}/traits:
